@@ -5,7 +5,11 @@ There is also a table that displays all of the questions and answers that have b
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, first run:
+### `npm i` 
+to install dependencies.
+
+Next, you can run:
 
 ### `npm start`
 
