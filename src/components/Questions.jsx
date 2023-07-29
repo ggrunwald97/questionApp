@@ -19,6 +19,10 @@ const Questions = () => {
   const options = useSelector(state => state.questionsAndAnswers.questions)
   const dispatch = useDispatch();
 
+  // formik IDS
+  const questionId = 'question';
+  const answerId = 'answer';
+
   const formik = useFormik({
     initialValues: {
       question: '',
@@ -100,10 +104,10 @@ const Questions = () => {
           includeInputInList
           onBlur={formik.handleBlur}
           onChange={(e, newValue) => {
-            formik.setFieldValue('question', newValue);
+            formik.setFieldValue(questionId, newValue);
             if (newValue && formik.values.answer) {
               setFoundAnswer(undefined);
-              formik.setFieldValue('answer', '');
+              formik.setFieldValue(answerId, '');
             }
           }}
           renderInput={(params) => (
@@ -114,10 +118,10 @@ const Questions = () => {
               helperText="Enter your question here"
               onChange={(e) => {
                 if (e.target.value) {
-                  formik.setFieldValue('question', e.target.value);
+                  formik.setFieldValue(questionId, e.target.value);
                   if (formik.values.answer && e.target.value.length === 1) {
                     setFoundAnswer(undefined);
-                    formik.setFieldValue('answer', '');
+                    formik.setFieldValue(answerId, '');
                   }
                 }
               }}
