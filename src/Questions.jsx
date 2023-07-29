@@ -89,7 +89,7 @@ const Questions = () => {
             Please enter a question below.
           </Typography>
         ) : (
-          <Box paddingTop={3}/>
+          <Box paddingTop={1}/>
         )}
         <Autocomplete
           id="question"
