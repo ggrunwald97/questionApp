@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Questions from './Questions';
+import Questions from './components/Questions';
 import { Box, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
 const dark = createTheme({

@@ -1,4 +1,4 @@
-import { Box, Grid, Table, TableContainer, TableBody, TableRow, TableHead, TableCell, Paper } from '@mui/material';
+import { Box, Grid, Table, TableContainer, TableBody, TableRow, TableHead, TableCell, Paper, Typography } from '@mui/material';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,6 +8,9 @@ const QuestionsTable = ({ options }) => {
     <Box paddingTop={16}>
       <Grid container justifyContent={'center'}>
         <Grid item>
+          <Typography variant="h6" component="div" gutterBottom>
+            Previously asked questions and answers
+          </Typography>
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 250 }} aria-label="question table">
               <TableHead>
