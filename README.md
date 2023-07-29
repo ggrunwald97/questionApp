@@ -1,6 +1,7 @@
-# Getting Started with Create React App and Redux
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Questions App
+This is a simple questions and answers app. Questions can be entered into the autocomplete on the left side of the screen (on desktop - on mobile, the autocomplete is at the top of the screen.)
+If an answer to a question already exists, then it will be displayed on the right side of the screen. If an answer does not exist, then the user can enter an answer and submit it. The answer will then be displayed on the right side of the screen.
+There is also a table that displays all of the questions and answers that have been entered. All data is stored in Redux and so will be cleared upon browser refreshes.
 
 ## Available Scripts
 

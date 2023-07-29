@@ -1,16 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Questions from './Questions';
+import { Box, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+
+const dark = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Questions />
-      </header>
-    </div>
+    <ThemeProvider theme={dark}>
+      <CssBaseline enableColorScheme />
+      <div className="App">
+        <header>
+          <h1>Questions App</h1>
+        </header>
+        <Box padding={4} >
+          <Questions />
+        </Box>
+      </div>
+    </ThemeProvider>
   );
 }
 
